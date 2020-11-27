@@ -11,17 +11,25 @@ import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 
 export default _ =>
     <div className="App">
         <h1>Fundamentos React (Arrow)</h1>
 
         <div className="Cards">
+            <Card titulo="#09 - Comunicação Indireta" color="#4f372d">
+                <IndiretaPai/>
+            </Card>
+            <Card titulo="#09 - Comunicação Direta" color="#29a8ab">
+                <DiretaPai/>
+            </Card>
             <Card titulo="#08 - Renderização Condicional" color="#ff3377">
                 <ParOuImpar numero={15}/>
                 <UsuarioInfo usuario={{nome: 'Fernando'}}/>
-                <UsuarioInfo usuario={{}}/>
-                <UsuarioInfo/>
+                {/*<UsuarioInfo usuario={{}}/>
+                <UsuarioInfo/>*/}
             </Card>
             <Card titulo="#07 - Desafio Repetição" color="#008744">
                 <TabelaProdutos/>
